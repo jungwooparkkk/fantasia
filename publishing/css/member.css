@@ -1,0 +1,58 @@
+@charset "ut-8";
+
+.container .joinStep{ text-align: center; position: relative;}
+.container .joinStep::before{content: ""; width: 290px; height: 1px; background-color: #3255b9;position: absolute; left: 50%; top: 21px; z-index: -1;transform: translateX(-50%);}
+.container .joinStep li{display: inline-block; width: 158px; padding-top: 62px;position: relative;}
+.container .joinStep li::before{content: ""; display: block;width: 40px; height: 40px; position: absolute; left: 50%; top: 0;transform: translateX(-50%);border: 2px solid #3255b9;border-radius: 50%;background-color: #fff;font-size: 20px; line-height: 40px; color: #3255b9;}
+.container .joinStep li:nth-child(1)::before{content: "1";}
+.container .joinStep li:nth-child(2)::before{content: "2";}
+.container .joinStep li:nth-child(3)::before{content: "3";}
+.container .joinStep li.on::before{background-color: #3255b9; color: #fff;}
+.container .btnWrap{ margin-top: 80px;}
+.container .btnWrap .btn{ width: 365px;}
+.container .btnWrap .btn + .btn{margin-left: 15px;}
+
+
+#loginArea .login{width: 470px; margin: 0 auto;}
+#loginArea .login .inputWrap{margin-top: 40px;}
+#loginArea .login .inputWrap .inputBox{margin-top: 15px;}
+#loginArea .login .inputWrap .inputBox input{width: 100%; height: 60px; padding-left: 20px; border: 1px solid #ccc; background-color: #f5f5f5; border-radius: 5px; box-sizing: border-box;}
+
+
+
+#loginArea .login .linkWrap{text-align: center;}
+#loginArea .login .linkWrap a{display: inline; padding-left: 21px; position: relative;} 
+#loginArea .login .linkWrap a::before{content: ""; position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 1px; height: 15px; background-color: #ccc; }
+#loginArea .login .linkWrap a:first-child:before{display: none;}
+
+#termsAgreeArea .termsAgree{width: 750px; margin: 0 auto;}
+#termsAgreeArea .termsAgree .notice{margin-bottom: 20px;}
+#termsAgreeArea .termsAgree .conWrap ul li:last-child .boxHead{border-bottom: 1px solid#ccc;}
+#termsAgreeArea .termsAgree .conWrap ul li .boxHead{padding: 20px 0; border-top: 1px solid#ccc; position: relative;}
+#termsAgreeArea .termsAgree .conWrap ul li .boxHead .ico{background: url(../member/images/ico_open.png) no-repeat center; width: 32px; height: 32px; position: absolute; right: 0; top: 50%; transform: translateY(-50%); cursor: pointer;}
+#termsAgreeArea .termsAgree .conWrap ul li.active .boxHead .ico{background-image: url(../member/images/ico_close.png);}
+#termsAgreeArea .termsAgree .conWrap ul li .boxCont{padding: 45px; height: 300px; border-top: 1px solid#ccc; box-sizing: border-box; overflow-y: scroll; line-height: 1.5em; color: #999; background-color: #f5f5f5; display: none;}
+
+#joinArea .join{width: 750px; margin: 0 auto;}
+
+#greatingJoin .info li{margin-top: 15px;}
+#greatingJoin .info li.emailWrap .inputBox{display: inline-block; vertical-align: middle;}
+#greatingJoin .info li.phonNumWrap .inputBox{display: inline-block; vertical-align: middle;}
+#greatingJoin .info li.addrWrap .zipCode input{vertical-align: middle; width: 230px;}
+#greatingJoin .info li.addrWrap .zipCode button{vertical-align: middle; width: 230px; height: 60px; font-family: 'Spoqa Han Sans Neo'; font-size: 18px; background-color: #404040; border-radius: 5px; border: 1px solid transparent; color: #fff; margin-left: 10px;}
+#greatingJoin .info li.phonNumWrap .inputBox.phone input{width: 230px;}
+#greatingJoin .info li .inputBox input{width:100%; height: 60px; padding-left: 20px; background-color: #f5f5f5; border: 1px solid #ccc; border-radius: 5px;  box-sizing: border-box;}
+#greatingJoin .info li .inputBox.email input{width: 230px;}
+
+/* selectBox */
+#greatingJoin ul li .selectBox{display: inline-block; vertical-align: middle;}
+#greatingJoin ul li .selectBox select{width: 230px; height: 60px; border-radius: 5px;border: 1px solid #ccc; background-color: #f5f5f5; font-family: 'Spoqa Han Sans Neo'; font-size: 16px;}
+#greatingJoin ul li.emailWrap .selectBox{margin-left: 11px;}
+#greatingJoin ul li.phonNumWrap .selectBox{margin-left: 11px;}
+
+/* 가입완료 */
+#joinComplete .txtWrap{text-align: center;}
+#joinComplete .txtWrap .icon{display: inline-block; width: 129px; height: 124px; background: url(../member/images/joinComplete.png) no-repeat; margin: 80px 0 80px 0;}
+#joinComplete .txtWrap .tit{font-size: 26px; font-weight: 300; margin-bottom: 26px;}
+#joinComplete .txtWrap .tit strong{font-weight: 500;}
+#joinComplete .txtWrap .txt{font-size: 14px; font-weight: 300; line-height: 1.5em; color: #404040;}

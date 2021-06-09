@@ -1,0 +1,107 @@
+@charset "ut-8";
+
+/* 폰트 */
+@import url(http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+body { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; font-size: 16px; line-height: 1; letter-spacing: -0.05em; color: #1b1b1b;}
+
+/* 초기화 */
+body,h1,h2,h3,h4,h5,h6,dl,dt,dd,ol,ul,li,p,legend,fieldset,button,input{margin: 0; padding: 0;}
+ol,ul{list-style: none;}
+a{text-decoration: none; color:#1b1b1b;}
+img{vertical-align: top;}
+em, address{font-style: normal;}
+button, input{font-family: inherit; font-size: 100%;}
+fieldset{border: 0;}
+table{border-spacing: 0; border-collapse: collapse;}
+
+/* 레이아웃 공통 */
+.container{width: 1330px; margin: 0 auto; border: 1px solid red;}
+
+/* 공통 클래스 */
+.hidden{font-size: 0; line-height: 0; height: 0; overflow: hidden; position: absolute; left: -9999px; opacity: 0; visibility: hidden;}
+.btn{cursor: pointer; width: 100%; height: 60px; border-radius: 30px; font-size: 20px; font-weight: 500; box-sizing: border-box;}
+.typeA{background-color: #fff; border: 1px solid #ccc;}
+.typeB{background-image: linear-gradient(to top, rgba(26,68,167), rgb(50,85,185)); color: #fff; border: 1px solid transparent;}
+.typeC{background-color: transparent; border: 1px solid #fff; color: #fff; }
+
+.checkboxWrap{position: relative;}
+.checkboxWrap input[type="checkbox"]{position: absolute; left: -9999px;}
+.checkboxWrap label{padding-left: 25px;}
+.checkboxWrap label::before{content: ""; display: inline-block; position: absolute; left: 0; top: -2px; width: 18px; height: 18px; background: url(../member/images/checkbox.png) no-repeat;}
+.checkboxWrap input[type="checkbox"]:checked + label::before{background-image: url(../member/images/checkbox_checked.png);}
+
+/* 공통 브레드크럼 외 */
+.container .breadcrumb li{display: inline-block; margin-bottom: 50px;}
+.container .breadcrumb li::before{content: ">"; display: inline-block; margin: 0 10px; color: #999;}
+.container .breadcrumb li:first-child::before{display: none;}
+.container .breadcrumb li a{display: inline-block; font-size: 14px; height: 50px; line-height: 50px;}
+.container .breadcrumb li:first-child a{color: #999;}
+.container .titWrap{text-align: center;}
+.container .titWrap span{display: block;}
+
+/* 헤더 */
+header .util{background-color: #ebebeb; padding: 17px 0;}
+header .util .container::after{content: ""; display: block; clear: both;}
+
+header .util .leUtil{float: left;}
+header .util .leUtil li{float: left; padding-left: 15px; margin-left: 14px; position: relative;}
+header .util .leUtil li:first-child{margin-left: 0; padding-left: 0;}
+header .util .leUtil li:before{content: ""; position: absolute; left: 0; top: 1px; width: 1px; height: 11px; background-color: #ccc;}
+header .util .leUtil li:first-child::before{display: none;}
+header .util .leUtil li a{display: block; font-size: 14px;}
+
+header .util .riUtil{float: right;}
+header .util .riUtil ul{float: left;}
+header .util .riUtil ul li{float: left; margin-left: 10px; padding-right: 15px; position: relative;}
+header .util .riUtil ul li::before{content: "/"; position: absolute; right: 0; top: 0; font-size: 11px; color: #ccc;}
+header .util .riUtil ul li a{display: block; font-size: 14px;}
+
+header .util .riUtil .lang{float: left; margin-left: 10px; position: relative;}
+
+header .util .riUtil .lang dt{font-size: 14px; padding-right: 18px; background: url(../images/icon_arrow.png) no-repeat right center; cursor: pointer;}
+header .util .riUtil .lang dt.on{color: #049dd9; background: url(../images/icon_arrow_on.png) no-repeat right center;}
+
+header .util .riUtil .lang dd{width: 62px; height:88px; padding-top: 13px; padding-left: 15px;border: 1px solid #ccc;box-sizing: border-box;background-color: #fff; position: absolute; left: 50%; top: 31px; transform: translateX(-50%); display: none;}
+header .util .riUtil .lang dd a{display: block; font-size: 14px; line-height:1.429em;}
+
+header .bottom{border-bottom: 1px solid #ccc;}
+header .bottom .container::after{content: ""; display: block; clear: both;}
+header .bottom h1{float: left; margin-top: 15px;}
+header .bottom .navWrap{float: left; margin-left: 115px;}
+
+header .bottom #gnb{}
+header .bottom #gnb::after{content: ""; display: block; clear: both;}
+header .bottom #gnb > li{float: left; width: 180px; position: relative;}
+header .bottom #gnb > li > a{display: block; height: 100px; font-size: 20px; font-weight: 500; line-height: 100px; text-align: center; position: relative;}
+header .bottom #gnb > li > a::before{content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height:4px; background-color: #049dd9; transform: scaleX(0); transition: .3s ease;}
+header .bottom #gnb > li.on > a::before{transform: scaleX(1);}
+header .bottom #gnb > li > a::after{content: ""; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width:16px; height: 14px; background: url(../images/ico_gnb_on.png) no-repeat center; display: none;}
+header .bottom #gnb > li.on > a::after{display: block;}
+header .bottom #gnb li .depth2{position: absolute; left: 50%; top: 100px; width: 180px; height: 280px; z-index: 2; transform: translateX(-50%); padding-top: 20px; border: 1px solid#ccc; box-sizing: border-box; border-radius: 0 0 10px 10px; background-color: #fff; box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2); display: none;}
+header .bottom #gnb li .depth2 ul li a{display: block; padding-left: 35px; line-height: 2.25em; background-color: #fff;}
+header .bottom #gnb li .depth2 ul li a:hover{color: #049dd9;}
+
+header .srchArea{display: none; background-color: #fff; position: absolute; left: 0; top: 148px; padding: 50px 0; box-sizing: border-box; z-index: 3; width: 100%; height: 230px; text-align: center; }
+header .srchArea .container{position: relative;}
+header .srchArea .inputBox{display: inline-block; position: relative; padding: 3px; border-radius: 32px; background-image: linear-gradient(to right, #3256b9, #049cd8);}
+header .srchArea .inputBox input[type="text"]{width: 548px; height: 58px; padding-left: 32px; box-sizing: border-box; border-radius: 29px; border: 0; font-family: 'Spoqa Han Sans Neo'; font-size: 18px; color: #404040; background-color: #fff;}
+header .srchArea .inputBox .icoSrh{position: absolute; right: 26px; top: 50%; width: 37px; height: 36px; transform: translateY(-50%); background: url(../images/ico_srh.png) no-repeat; text-indent: -9999px; cursor: pointer;}
+header .srchArea .icoClose{position: absolute; right: 0; top: 0; cursor: pointer;}
+
+
+
+/* 푸터 */
+footer .top{background-color: #ebebeb;}
+footer .top .footLink{font-size: 0;}
+footer .top .container .footLink a{display: inline-block; font-size: 15px; height: 60px; line-height: 60px; color: #404040; margin-left: 20px; padding-left: 21px; position: relative;}
+footer .top .container .footLink a::before{content: ""; position: absolute; left: 0; top: 50%; background-color: #ccc; transform: translateY(-50%); width: 1px; height: 13px; }
+footer .top .container .footLink a:first-child{margin-left: 0; padding-left: 0;}
+footer .top .container .footLink a:first-child::before{display: none;}
+footer .top .container .footLink a em{font-weight: 700;}
+footer .bottom{padding-top: 40px; padding-bottom: 100px;}
+footer .bottom .container::after{content: ""; display: block; clear: both;}
+footer .bottom .footLogo{float: left;}
+footer .bottom .addrCopy{float: left; margin-left: 87px;}
+footer .bottom address p{font-size: 15px; line-height: 1.6em;  color: #404040; }
+footer .bottom .copyRight{font-size: 15px; margin-top: 22px; color: #999;}
